@@ -1,0 +1,21 @@
+name: giuseppe
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  do:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Dagger
+        uses: ./
+        with:
+          args: --help
