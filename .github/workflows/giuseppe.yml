@@ -17,6 +17,6 @@ jobs:
       -
         name: Dagger
         uses: ./
-        working-directory: test
         with:
           args: do test --plan ci/main.cue
+          workdir: test
