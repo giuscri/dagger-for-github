@@ -8,9 +8,9 @@ import * as core from '@actions/core';
 import * as exec from '@actions/exec';
 
 async function run(): Promise<void> {
-  core.info("Hello 🐱");
-
   try {
+    core.info("Hello world!");
+
     const inputs: context.Inputs = await context.getInputs();
     const daggerBin = await dagger.install(inputs.version);
 
