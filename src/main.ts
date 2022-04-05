@@ -8,7 +8,7 @@ import * as core from '@actions/core';
 import * as exec from '@actions/exec';
 
 async function run(): Promise<void> {
-  console.log("Hello planet!");
+  core.info("Hello 🐱");
 
   try {
     const inputs: context.Inputs = await context.getInputs();
