@@ -192,9 +192,9 @@ const core = __importStar(__webpack_require__(186));
 const exec = __importStar(__webpack_require__(514));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        core.info("hacking around");
         try {
             const inputs = yield context.getInputs();
+            core.info(`inputs.args=${inputs.args}`);
             const daggerBin = yield dagger.install(inputs.version);
             if (inputs.installOnly) {
                 const daggerDir = path_1.default.dirname(daggerBin);
